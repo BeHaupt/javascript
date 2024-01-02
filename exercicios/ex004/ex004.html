@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudando JavaScript</title>
+    <style>
+        body {
+            background-image: linear-gradient(to top right, blue, purple);
+            height: 100vh;
+
+            font: normal 3rem Arial;
+            color: #ebebeb;
+
+            text-align: center;
+            margin-top: 10%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <script>
+        var nome = prompt('What is your name?')
+        document.write(` Olá <strong>${nome}</strong>, Seu nome tem ${nome.length} letras.`)
+
+        // Formatação de dados para representar as formas de dinheiro//
+        var n1 =2080.5
+        n1.toLocaleString({style: 'currency', currency: 'EUR'})
+        
+    </script>
+
+</body>
+
+</html>
