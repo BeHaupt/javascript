@@ -1,31 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aprendendo DOM em Js</title>
+    <title>Document</title>
     <style>
-        body {
-            background-color: dodgerblue;
+        #area {
+            background-color: green;
             color: white;
             font-size: 18pt;
-            font-family: Arial, Helvetica, sans-serif;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+
         }
     </style>
 </head>
 
 <body>
-    <!-- Document Object Model -->
-    <h1>Iniciando estudos DOM</h1>
-    <p>Aqui vai o resultado</p>
-    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
-    <div>Clique em mim</div>
+    <div id="area">
+        Interaja...
+    </div>
+
     <script>
-        var corpo = window.document.body
-        corpo.style.background = 'yellow'
+        var a = window.document.getElementById('area')
+
+        a.addEventListener("click", clicar)
+        a.addEventListener("mouseenter", entrar)
+        a.addEventListener("mouseout", sair)
+
+        function clicar() {
+            a.innerText = 'Clicou'
+            a.style.backgroundColor = "red"
+        }
+        function entrar() {
+            a.innerText = 'Entrou'
+        }
+        function sair() {
+            a.innerText = 'Saiu'
+            a.style.backgroundColor = "green"
+        }
 
     </script>
+
+
+
+
+
 </body>
 
 </html>
